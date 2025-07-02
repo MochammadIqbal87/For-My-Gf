@@ -1,43 +1,36 @@
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  height: 100vh;
-
   margin: 0;
-
   padding: 20px;
-
   background-image: url("Background.jpg");
-
   background-size: cover;
-
   background-position: center;
-
   font-family: Arial, sans-serif;
-
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: start; /* ubah dari center jadi start */
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
   display: grid;
-
   grid-template-areas:
     "top-left top-right"
     "button button"
     "bottom-left bottom-right"
     ". bottom-text";
-
   gap: 20px;
-
   text-align: center;
-
   position: relative;
+  width: 100%;
+  max-width: 500px;
 }
 
 .box {
