@@ -5,6 +5,10 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh; /* atau coba 100svh */
   margin: 0;
   padding: 20px;
   background-image: url("Background.jpg");
@@ -12,11 +16,6 @@ body {
   background-position: center;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: start; /* ubah dari center jadi start */
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .container {
