@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Lovely Saniii</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay>
+    <source src="MyGirl.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="container popup-animate">
+    <div class="box box-top-left popup-animate">
+      <img src="myluv1.jpg" alt="Image 1" />
+    </div>
+
+    <div class="text text-top-right popup-animate">
+      HALLOOWWWW DUNIAAAKUUU SAYANGGNYA AKUUUU CANTIKNYAAA AKUUUUU <br />
+      iyaaaa siapa lagi kalau bukan kamuuu Annisa Aurelia Mauludin
+    </div>
+
+    <button class="button popup-animate" onclick="spawnFlowers()">coba klik</button>
+    <div id="flower-container"></div>
+
+    <div class="text text-bottom-left popup-animate">
+      Aku cuma mau ngomong kalau aku sayanggg banget sama kamuuuu, maaf yaaa
+      kalau aku masih sering membuat kamu menangis dan masih sering mengatur-ngatur
+      yang mungkin membuat kamu tidak nyaman, tapiiii kita tidak akan menyerah satu sama lain bukan? <br><br>
+      YEAYYYYYYYY AKU BANGGAAAAA BANGET PUNYA KAMU, aku harap kita bisa bersama selamanyaaaaa. 
+      I LOVEEE YOUUUUUUU SAYANGGGGGGG ❤️
+    </div>
+
+    <div class="box box-bottom-right popup-animate">
+      <img src="myluv2.jpg" alt="Image 2" />
+    </div>
+
+    <div class="text text-bottom popup-animate">
+      Why yhh setiap mendengar suara kamu, liat foto kamu, kamu on cam, dan lain lain aku makin jatuh cinta >//<
+    </div>
+  </div>
+
+  <script>
+    function spawnFlowers() {
+      const container = document.getElementById("flower-container");
+
+      for (let i = 0; i < 20; i++) {
+        const flower = document.createElement("div");
+        flower.className = "flower";
+        flower.style.left = Math.random() * window.innerWidth + "px";
+        flower.style.top = "-30px";
+
+        container.appendChild(flower);
+
+        flower.addEventListener("animationend", () => {
+          flower.remove();
+        });
+      }
+    }
+
+   
+  </script>
+  <script>
+  // Setelah halaman dimuat, tambahkan kelas "popup-popup-animate" satu per satu dengan jeda
+  window.onload = () => {
+    const elements = document.querySelectorAll('.popup-animate');
+    elements.forEach((el, i) => {
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'scale(1)';
+      }, i * 150); // 150ms jeda antar elemen
+    });
+  };
+</script>
+
+</body>
+</html>
